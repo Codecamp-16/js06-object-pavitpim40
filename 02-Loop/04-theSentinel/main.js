@@ -9,6 +9,11 @@ function terminate(key) {
   return key === 'stop';
 }
 
+function isValid(text) {
+  if (text === null || text.trim() === '') return false;
+  return true;
+}
+
 // P4-log object นั้นออกมา [check]
 function printObj(obj) {
   console.log(obj);
@@ -32,7 +37,9 @@ function createObjectFromUser() {
     value = prompt('Enter value');
     if (terminate(value)) break;
     // insert key value to object
-    object[key] = value;
+    if (isValid(key) && isValid(value)) {
+      object[key] = value;
+    }
   } while (true);
   return object;
 }
