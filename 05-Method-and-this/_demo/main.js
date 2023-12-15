@@ -1,3 +1,4 @@
+// 'use strict';
 // method (ความสามารถของ Object, key ที่มี value เป็น function)
 // this keyword
 
@@ -78,25 +79,25 @@ const user2 = {
 
 // Ex4 : this (in action)
 
-const todoList = {
-  list: [],
-  addTodo: function (newTodo) {
-    this.list.push(newTodo);
-    //todoList.list.push(newTodo)
-  },
-  finishTodo: function () {
-    this.list.shift();
-  },
-};
+// const todoList = {
+//   list: [],
+//   addTodo: function (newTodo) {
+//     this.list.push(newTodo);
+//     //todoList.list.push(newTodo)
+//   },
+//   finishTodo: function () {
+//     this.list.shift();
+//   },
+// };
 
-console.log(todoList);
-todoList.addTodo('Do HW'); // this == todoList
-todoList.addTodo('Travel'); // this == todoList
+// console.log(todoList);
+// todoList.addTodo('Do HW'); // this == todoList
+// todoList.addTodo('Travel'); // this == todoList
 
-console.log(todoList);
+// console.log(todoList);
 
-todoList.finishTodo();
-console.log(todoList);
+// todoList.finishTodo();
+// console.log(todoList);
 
-todoList.finishTodo();
-console.log(todoList);
+// todoList.finishTodo();
+// console.log(todoList);
