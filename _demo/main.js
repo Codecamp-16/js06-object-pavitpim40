@@ -88,3 +88,44 @@ animal.searchKey; // undefined
 'type' in animal;
 'breed' in animal;
 'bankAccount' in animal;
+
+// ############ Property Shothand => ใช้ชื่อตัวแปร แทน key-value pair
+// ชื่อตัวแปรจะเป็นชื่อ key
+// ค่าที่เก็บเก็บในตัวจะเป็น value
+
+const user1 = {
+  firstName: 'John',
+  age: 30,
+};
+
+let firstName = 'John';
+let age = 30;
+let isAdmin = false;
+
+const user2 = {
+  firstName,
+  age,
+  isAdmin,
+};
+
+console.log(user2);
+
+//######  in Operator
+
+'firstName' in user2;
+'age' in user2;
+'isVip' in user2;
+
+const loginObj = {
+  username: 'gggg@gmai.com',
+  // password: "1234",
+  confirmPassword: '1234',
+};
+
+// "password" : string
+//  password : variable
+
+let check = 'password';
+if (!(check in loginObj)) {
+  console.log('Error');
+}
