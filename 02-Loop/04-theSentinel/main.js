@@ -4,9 +4,12 @@
 // P4-log object นั้นออกมา [check]
 
 // P2-จนกว่าจะเจอคำว่า stop
+
+const SENTINEL = 'stop';
+
 function terminate(key) {
   console.log(key === 'stop');
-  return key === 'stop';
+  return key === SENTINEL;
 }
 
 function isValid(text) {
